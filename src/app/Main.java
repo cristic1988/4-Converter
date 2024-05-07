@@ -7,12 +7,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("App for converting units of length.");
         double ml = 3;
+        double km = 9;
         double kilometres = convMlToKm(ml);
-        System.out.println("Result is " + kilometres + " km.");
+        double miles = convKmToMl(km);
+        System.out.println("Result is " + kilometres + " km and " + miles + " ml.");
 
     }
     private static double convMlToKm(double ml) {
         return ml * CONV_K;
     }
+
+    private static double convKmToMl(double km) {
+        return km / CONV_K;
+    }
+
 
 }
